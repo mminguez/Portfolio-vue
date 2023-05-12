@@ -5,14 +5,15 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/Portfolio-vue/',
   plugins: [vue(), VitePWA({
     registerType: 'autoUpdate',
     manifest: {
-      "name": "0xbul1.github.io",
-      "short_name": "0xbul1",
+      "name": "mminguez.github.io",
+      "short_name": "mminguez",
       "start_url": ".",
       "display": "standalone",
-      "description": "a simple portfolio",
+      "description": "My portfolio",
     },
   }), svgLoader({svgo: false})],
   css: {
@@ -22,7 +23,6 @@ export default defineConfig({
       }
     }
   },
-  // 开启本地测试
   server: {
     host: true
   }
