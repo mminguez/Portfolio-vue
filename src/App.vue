@@ -67,6 +67,9 @@ export default {
 };
 </script>
 <style>
+.App {
+  background-color: black;
+}
 /* scroll css animation */
 .vite-bounce-enter-active {
   animation: vite-bounce-in 0.5s;
@@ -81,11 +84,11 @@ export default {
 }
 .slide-right-leave-active,
 .slide-left-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .8s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .slide-right-enter,
 .slide-left-leave-to {
-  transform: translateX(100%);
+  transform: translateY(-100%);
 }
 .slide-right-leave-to,
 .slide-left-enter {

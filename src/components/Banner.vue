@@ -1,5 +1,5 @@
 <template>
-  <section class="main">
+  <section class="main" :style="{ 'background-color': backgroundColor }">
     <div class="container">
       <div class="row">
         <h2>
@@ -13,8 +13,8 @@
           </div>
         </h2>
         <div class="btn-row">
-          <router-link to="/about-us">
-            En savoir plus
+          <router-link :to="link">
+            {{ textLink }}
             <RightArrow />
           </router-link>
         </div>
@@ -36,20 +36,26 @@ export default {
     RightArrow
   },
   setup() {
-    const line1Desc = VITE_APP_CONFIG.line1Desc;
-    const line2Desc = VITE_APP_CONFIG.line2Desc;
     const route = useRoute();
-    const transitionName = ref('default'); // default transition
+    const transitionName = ref('default');
+    const line1Desc = computed(() => VITE_APP_CONFIG.banner[route.name]?.line1Desc || '');
+    const line2Desc = computed(() => VITE_APP_CONFIG.banner[route.name]?.line2Desc || '');
+    const link = computed(() => VITE_APP_CONFIG.banner[route.name]?.link || '/'); 
+    const textLink = computed(() => VITE_APP_CONFIG.banner[route.name]?.textLink || ''); 
+    const backgroundColor = computed(() => VITE_APP_CONFIG.banner[route.name]?.color || '#DED0C5'); 
+
 
     watch(route, (to, from) => {
-      // update transition based on meta field
       transitionName.value = to.meta.transition || 'default';
     });
 
     return {
       line1Desc,
       line2Desc,
-      transitionName
+      transitionName,
+      link,
+      textLink,
+      backgroundColor
     };
   },
 };
@@ -59,7 +65,6 @@ export default {
 .main {
   height: 50vh; //fallback option
   height: calc(var(--vh, 1vh) * 50);
-  background-color: #DED0C5;
 
   .row {
     flex-direction: column;
@@ -108,7 +113,6 @@ export default {
       width: 256px;
       position: relative;
       z-index: 2;
-
       a {
         font-size: 1.6rem;
         color: $black;

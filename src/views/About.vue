@@ -1,29 +1,51 @@
 <template>
-  <div class="page">
-    <div class="container">
-      <div class="row">
-        <h3>This is the About page</h3>
-        <div class="btn-row">
-          <router-link to="/">
-            Retour
-            <RightArrow />
-          </router-link>
-        </div>
-      </div>
-    </div>
-  </div>
+  <IntroOverlay v-if="animationComplete === false" />
+  <Banner />
+  <Cases />
 </template>
 
 <script>
-import RightArrow from '../assets/arrow-right.svg';
+import { ref, watch, onMounted } from 'vue';
+import { homeAnimation } from '../animations';
+import IntroOverlay from '../components/IntroOverlay.vue';
+import Banner from '../components/Banner.vue';
+import Cases from '../components/Cases.vue';
 
 export default {
-  name: 'About',
+  name: 'Home',
   components: {
-    RightArrow
+    IntroOverlay,
+    Banner,
+    Cases,
+  },
+  props: {
+    dimensions: {
+      type: Object,
+    },
+  },
+  setup(props) {
+    const animationComplete = ref(false);
+    const completeAnimation = () => {
+      animationComplete.value = true;
+    };
+
+    onMounted(() => {
+      homeAnimation(completeAnimation);
+    });
+
+    watch(
+      () => props.dimensions.width,
+      () => {
+        const vh = props.dimensions.height * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      },
+    );
+
+    return {
+      animationComplete,
+    };
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>
