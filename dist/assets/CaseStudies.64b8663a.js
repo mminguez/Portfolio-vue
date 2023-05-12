@@ -1,0 +1,1 @@
+import{c as s,o as e,f as a}from"./vendor.5336ed79.js";const i={name:"CaseStudies"},n={class:"page"},r=[a("div",{class:"container"},[a("div",{class:"row"},[a("h3",null,"This is the case studies page")])],-1)];i.render=function(a,i,t,d,o,c){return e(),s("div",n,r)};export{i as default};
