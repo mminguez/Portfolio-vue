@@ -54,6 +54,8 @@ export default {
   padding: 2rem 0;
   background-color: #DED0C5;
   color: $black;
+  height: auto;
+
   .container {
     max-width: 800px;
     margin: 0 auto;

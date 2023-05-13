@@ -140,10 +140,12 @@ export default {
 
         @include media('<=tablet') {
           width: 100vw;
+          justify-content: flex-start;
         }
 
         @include media('<=phone') {
           padding: 16px;
+          justify-content: flex-start;
         }
 
         span {
@@ -175,10 +177,12 @@ export default {
           }
 
           @include media('<=desktop', '>tablet') {
+            margin-top: 0px;
             font-size: 1.4rem;
           }
 
           @include media('<=phone') {
+            margin-top: 0px;
             font-size: 1.2rem;
             line-height: 2.2rem;
           }
