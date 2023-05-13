@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row v-center space-between">
         <div class="logo">
-          <a to="/" exact> {{ logoName }} </a>
+          <a href="/" exact> {{ logoName }} </a>
         </div>
         <div class="nav-toggle">
           <div class="hamburger-menu" @click="menuState.menuOpened = true">

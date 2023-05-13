@@ -4,22 +4,24 @@
       <div class="row">
         <h2>
           <div class="line">
-            <!-- <span>Creating unique brands is</span> -->
             <span>{{ line1Desc }}</span>
           </div>
           <div class="line">
-            <!-- <span>what we do.</span> -->
             <span>{{ line2Desc }}</span>
           </div>
         </h2>
         <div class="btn-row">
-          <router-link :to="link">
+          <!-- Use v-if to conditionally render either a router-link or an anchor based on whether the link is internal or external -->
+          <router-link v-if="isInternalLink" :to="link">
             {{ textLink }}
             <RightArrow />
           </router-link>
-        </div>
+          <a v-else :href="link" target="_blank" rel="noopener noreferrer">
+            {{ textLink }}
+            <RightArrow />
+          </a>
       </div>
-
+      </div>
     </div>
   </section>
 </template>
@@ -38,12 +40,22 @@ export default {
   setup() {
     const route = useRoute();
     const transitionName = ref('default');
-    const line1Desc = computed(() => VITE_APP_CONFIG.banner[route.name]?.line1Desc || '');
-    const line2Desc = computed(() => VITE_APP_CONFIG.banner[route.name]?.line2Desc || '');
-    const link = computed(() => VITE_APP_CONFIG.banner[route.name]?.link || '/'); 
-    const textLink = computed(() => VITE_APP_CONFIG.banner[route.name]?.textLink || ''); 
-    const backgroundColor = computed(() => VITE_APP_CONFIG.banner[route.name]?.color || '#DED0C5'); 
-
+    const bannerConfig = computed(() => {
+      if (route.name === 'CaseStudies') {
+        // If this is a case studies page, get the banner config for the specific case study
+        const caseStudyId = route.params.id;
+        return VITE_APP_CONFIG.banner.CaseStudies[caseStudyId];
+      } else {
+        // Otherwise, get the generic banner config for this route
+        return VITE_APP_CONFIG.banner[route.name];
+      }
+    });
+    const line1Desc = computed(() => bannerConfig.value?.line1Desc || '');
+    const line2Desc = computed(() => bannerConfig.value?.line2Desc || '');
+    const link = computed(() => bannerConfig.value?.link || '/');
+    const textLink = computed(() => bannerConfig.value?.textLink || '');
+    const backgroundColor = computed(() => bannerConfig.value?.color || '#DED0C5');
+    const isInternalLink = computed(() => !link.value.startsWith('http'));
 
     watch(route, (to, from) => {
       transitionName.value = to.meta.transition || 'default';
@@ -55,7 +67,8 @@ export default {
       transitionName,
       link,
       textLink,
-      backgroundColor
+      backgroundColor,
+      isInternalLink
     };
   },
 };
@@ -113,6 +126,7 @@ export default {
       width: 256px;
       position: relative;
       z-index: 2;
+
       a {
         font-size: 1.6rem;
         color: $black;
@@ -161,6 +175,4 @@ export default {
     }
   }
 }
-
-
 </style>

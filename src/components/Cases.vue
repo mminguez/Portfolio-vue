@@ -53,7 +53,7 @@ export default {
     const dynamicImport = (name) => {
       return new URL(`../assets/${name}.jpeg`, import.meta.url).href;
     };
-    const projectDesc = computed(() => VITE_APP_CONFIG.projectDesc[route.name] || []); // Default to empty array if projects are not found
+    const projectDesc = computed(() => VITE_APP_CONFIG.projectDesc[route.name] || []);
 
     return {
       projectDesc,
@@ -152,6 +152,27 @@ export default {
           opacity: 0.8;
           color: $white;
           font-weight: 600;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 10;
+            background: $white;
+            transition: 0.4s ease;
+          }
+
+          &:hover {
+            &:after {
+              width: 25%;
+              left: 0;
+              background: $white;
+            }
+          }
 
           @include media('<=desktop', '>tablet') {
             font-size: 1.4rem;

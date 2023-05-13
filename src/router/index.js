@@ -12,9 +12,11 @@ const routes = [
     meta: { transition: 'slide-right' },
   },
   {
-    path: '/case-studies',
+    path: '/case-studies/:id',
     name: 'CaseStudies',
     component: () => import('../views/CaseStudies.vue'),
+    meta: { transition: 'slide-right' },
+
   },
   {
     path: '/approach',

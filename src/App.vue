@@ -72,11 +72,11 @@ export default {
 }
 /* scroll css animation */
 .vite-bounce-enter-active {
-  animation: vite-bounce-in 0.5s;
+  animation: vite-bounce-in 0.8s;
 }
 
 .vite-bounce-leave-active {
-  animation: vite-bounce-in 0.3s reverse;
+  animation: vite-bounce-in 0.25s reverse;
 }
 .slide-right-enter-active,
 .slide-left-enter-active {
@@ -100,8 +100,12 @@ export default {
     transform: scaleY(0);
   }
 
+  20% {
+    transform: scaleY(1.35);
+  }
+
   50% {
-    transform: scaleY(1.05);
+    transform: scaleY(1.0);
   }
 
   100% {
