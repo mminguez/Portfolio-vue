@@ -78,20 +78,20 @@ export default {
 .vite-bounce-leave-active {
   animation: vite-bounce-in 0.25s reverse;
 }
-.slide-right-enter-active,
-.slide-left-enter-active {
+.slide-top-enter-active,
+.slide-bottom-enter-active {
   transition: all .3s ease;
 }
-.slide-right-leave-active,
-.slide-left-leave-active {
+.slide-top-leave-active,
+.slide-bottom-leave-active {
   transition: all .8s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-.slide-right-enter,
-.slide-left-leave-to {
+.slide-top-enter,
+.slide-bottom-leave-to {
   transform: translateY(-100%);
 }
-.slide-right-leave-to,
-.slide-left-enter {
+.slide-top-leave-to,
+.slide-bottom-enter {
   transform: translateY(-100%);
 }
 

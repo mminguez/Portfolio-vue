@@ -11,7 +11,6 @@
           </div>
         </h2>
         <div class="btn-row">
-          <!-- Use v-if to conditionally render either a router-link or an anchor based on whether the link is internal or external -->
           <router-link v-if="isInternalLink" :to="link">
             {{ textLink }}
             <RightArrow />

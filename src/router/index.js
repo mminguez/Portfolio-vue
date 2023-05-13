@@ -9,19 +9,20 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import('../views/Home.vue'),
-    meta: { transition: 'slide-right' },
+    meta: { transition: 'slide-top' },
   },
   {
     path: '/case-studies/:id',
     name: 'CaseStudies',
     component: () => import('../views/CaseStudies.vue'),
-    meta: { transition: 'slide-right' },
+    meta: { transition: 'slide-top' },
 
   },
   {
     path: '/me',
     name: 'Me',
     component: () => import('../views/Me.vue'),
+    meta: { transition: 'slide-top' },
   },
   {
     path: '/services',
@@ -32,7 +33,7 @@ const routes = [
     path: '/projects',
     name: 'About',
     component: () => import('../views/About.vue'),
-    meta: { transition: 'slide-left' },
+    meta: { transition: 'slide-bottom' },
   },
 ];
 

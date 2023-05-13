@@ -40,7 +40,7 @@ export const VITE_APP_CONFIG = {
         line1Desc: 'Projet back-end Rest API',
         textLink: 'Lien Github',
         link: 'https://github.com/mminguez/P7',
-        color: '#DEBEA4',
+        color: '#DED8A4',
         isExternal: true,
       },
     },
@@ -112,17 +112,32 @@ export const VITE_APP_CONFIG = {
     {
       id: '1',
       title: 'Un projet de la formation Web Développeur OpenClassrooms ',
-      description: 'Description for Case Study 1',
+      description: [
+        ' Kasa est un site développé en ReactJS où nous j\'ai uniquement travaillé sur le frontend en récupérant les données à partir d\'un fichier JSON. Le site suit une maquette et des spécifications techniques fournies. Il s\'agit d\'une plateforme permettant aux utilisateurs de rechercher des hébergements disponibles et de consulter les détails de chaque hébergement.',
+        'L\'un des défis était d\'afficher correctement les données provenant du fichier JSON et de les rendre facilement accessibles pour les utilisateurs. J\'ai résolu ce problème en utilisant des composants React et en structurant les données pour les rendre adaptées à l\'affichage.',
+        'Ce projet m\'a permis de renforcer mes compétences en développement frontend avec ReactJS. J\'ai appris à manipuler les composants React, à gérer les états et à afficher des données dynamiques à partir d\'un fichier JSON.',
+      ],
+      img: ['kasa', 'kasa2', 'kasa3'],
     },
     {
       id: '2',
       title: 'Un site vitrine et une web app de gestion de réservations',
-      description: 'Description for Case Study 2',
+      description: [
+        'Euroyacht est un site vitrine dont le plus gros du travail a été la conception d\'une webapp de planning permettant au propriétaire de gérer les réservations d\'une flotte de bateaux à louer. J\'ai développé ce projet en utilisant la pile MEVN (MongoDB, Express, Vue.js, Node.js). La webapp permet aux utilisateurs de consulter les disponibilités des bateaux. Le système utilise une base de données MongoDB pour stocker les informations des bateaux et des réservations.',
+        'L\'une des principales problématiques était la gestion des différentes données et l\'affichage croisé dans le planning. Certaines données dépendent d\'autres et la récupération dynamique a été un vrai challenge. De plus de nombreuses contraintes ont été données par le client. Aussi, la sécurisation des données sensibles a été un point important et sur lequel j\'ai beaucoup travaillé. ',
+        'Ce projet m\'a permis de développer mes compétences en développement fullstack en utilisant la pile MEVN. J\'ai acquis une meilleure compréhension de la gestion des bases de données MongoDB, de la création d\'API avec Express et de la création d\'interfaces utilisateur réactives avec Vue.js, tout comme la création de composants complexes et avec une architecture précise. Le tout en respectant les bonnes pratiques de développement et en m\'assurant que le site soit responsive',
+      ],
+      img: ['euroyacht1', 'euroyacht2', 'euroyacht3'],
     },
     {
       id: '3',
       title: 'Un projet de la formation Web Développeur OpenClassrooms',
-      description: 'Description for Case Study 3',
+      description: [
+        'Mon Vieux grimoire est un serveur RESTful API développé en utilisant Node.js, Express et MongoDB. Il s\'agit d\'un site de notation de livres où les utilisateurs peuvent consulter, ajouter et noter des livres. J\'ai également mis en place un système d\'authentification pour sécuriser l\'accès aux fonctionnalités réservées aux utilisateurs connectés.',
+        'L\'une des problématiques principales était la gestion de l\'authentification des utilisateurs et la sécurisation des routes nécessitant une authentification. J\'ai résolu ce problème en mettant en place des middleware d\'authentification pour vérifier les jetons d\'accès (JWT). La deuxième problématique a été la gestion des notatations des livres. En effet je devais m\'assurer qu\'un utilisateur ne puisse pas noter plusieurs fois le même livre et puis d\'actualiser dynamiquement la moyenne des notes',
+        'Ce projet m\'a permis de renforcer mes compétences en développement d\'API avec Node.js et Express. J\'ai appris à mettre en place un système d\'authentification robuste avec hashage des mots de passes, à gérer les routes et à intéragir avec une base de données MongoDB.',
+      ],
+      img: ['vieux_grimoire'],
     },
   ],
 
