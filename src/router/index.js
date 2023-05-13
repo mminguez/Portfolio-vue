@@ -19,9 +19,9 @@ const routes = [
 
   },
   {
-    path: '/approach',
-    name: 'Approach',
-    component: () => import('../views/Approach.vue'),
+    path: '/me',
+    name: 'Me',
+    component: () => import('../views/Me.vue'),
   },
   {
     path: '/services',
@@ -29,7 +29,7 @@ const routes = [
     component: () => import('../views/Services.vue'),
   },
   {
-    path: '/about-us',
+    path: '/projects',
     name: 'About',
     component: () => import('../views/About.vue'),
     meta: { transition: 'slide-left' },

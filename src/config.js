@@ -8,16 +8,16 @@ export const VITE_APP_CONFIG = {
     Home: {
       line1Desc: 'Bienvenue',
       line2Desc: 'Je m\'appelle Mathieu',
-      textLink: 'En savoir plus',
-      link: '/about-us',
+      textLink: 'Mes projets',
+      link: '/projects',
       color: '#DED0C5', // shared complementary from #BAC6DE
       isExternal: false,
     },
     About: {
       line1Desc: 'Pour en savoir plus sur moi',
       line2Desc: 'Voici quelques travaux que j\'ai réalisé',
-      textLink: 'Retour à l\'accueil',
-      link: '/',
+      textLink: 'À propos de moi',
+      link: '/me',
       color: '#DEBEA4', // shared complementary double from #BAC6DE
       isExternal: false,
     },
@@ -44,6 +44,14 @@ export const VITE_APP_CONFIG = {
         isExternal: true,
       },
     },
+    Me: {
+      line1Desc: 'À propos de moi',
+      line2Desc: 'Mon parcours, mes compétences, etc...',
+      textLink: 'Mon CV',
+      link: 'https://github.com/mminguez/Portfolio-vue/blob/main/src/assets/cv_mathieu_minguez.pdf',
+      color: '#DEBEA4', // shared complementary double from #BAC6DE
+      isExternal: true,
+    },
   },
 
   projectDesc: {
@@ -69,7 +77,7 @@ export const VITE_APP_CONFIG = {
         subtitle: 'Mon cv',
         title: 'Cliquez pour télécharger',
         img: 'img3',
-        url: './src/assets/cv_mathieu_minguez.pdf',
+        url: 'https://github.com/mminguez/Portfolio-vue/blob/main/src/assets/cv_mathieu_minguez.pdf',
         isExternal: true,
       },
     ],
