@@ -176,7 +176,7 @@ export default {
             }
           }
 
-          @include media('<=desktop', '>tablet') {
+          @include media('<=tablet') {
             margin-top: 0px;
             font-size: 1.4rem;
           }
@@ -195,13 +195,13 @@ export default {
           margin-top: 16px;
           color: #DED0C5;
 
-          @include media('<=desktop', '>tablet') {
-            font-size: 2rem;
+          @include media('<=tablet') {
+            font-size: 1rem;
             line-height: 2.4rem;
           }
 
           @include media('<=phone') {
-            font-size: 1.7rem;
+            font-size: 1rem;
             line-height: 2.2rem;
             margin-top: 8px;
           }

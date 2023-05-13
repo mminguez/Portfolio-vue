@@ -83,6 +83,7 @@ export default {
     }
   }
   .nav-toggle {
+    margin-right: 36px;
     cursor: pointer;
     position: relative;
     display: flex;
@@ -93,7 +94,6 @@ export default {
     }
     @include media('<=phone') {
       width: 20px;
-      margin-right: 16px;
     }
 
     .hamburger-menu {

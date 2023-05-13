@@ -93,11 +93,12 @@ export default {
       @include media('<=tablet') {
         font-size: 2.4rem;
         line-height: 3rem;
+        margin-top: 80px;
       }
 
       @include media('<=phone') {
         margin-top: 72px;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         line-height: 2.2rem;
       }
 
@@ -108,11 +109,11 @@ export default {
         overflow: hidden;
 
         @include media('<=tablet') {
-          height: 48px;
+          height: 90px;
         }
 
         @include media('<=phone') {
-          height: 32px;
+          height: 70px;
         }
 
         span {
