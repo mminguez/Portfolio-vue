@@ -22,7 +22,7 @@
       <br/>
       <br/>
       <p>Je suis actuellement en recherche de nouvelles opportunités dans le domaine du développement web et logiciel, où je pourrai 
-        mettre à profit mes compétences et ma passion pour l'informatique. N'hésitez pas à me contacter par e-mail à mathieu.minguez@gmail.com 
+        mettre à profit mes compétences et ma passion pour l'informatique. N'hésitez pas à me contacter par e-mail à web-mm@pm.me
         ou par téléphone au 06 51 77 92 33.</p>
       <img src="../assets/moi.jpeg" alt="moi" />
     </div>

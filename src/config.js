@@ -1,8 +1,8 @@
 export const VITE_APP_CONFIG = {
 
-  SiteName: 'Mathieu Minguez',
+  SiteName: 'MM - Web Developper',
 
-  logoName: 'Mathieu _ Minguez .',
+  logoName: 'MM _ Web .',
 
   banner: {
     Home: {
@@ -142,7 +142,7 @@ export const VITE_APP_CONFIG = {
   ],
 
   // Email
-  email: 'mathieu.minguez@gmail.com',
+  email: 'web-mm@pm.me',
 
   // phone
   phone: '+33 (0)6 51 77 92 33'
